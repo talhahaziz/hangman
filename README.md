@@ -36,3 +36,32 @@ else:
     print( "Oops! That is not a valid input.")
 
 ```
+
+## Milestone 3 
+
+- Create a while loop to continously ask the user to input a letter and validate it with the random word.
+
+- While loop condition is set to True. This is to make sure the code is run continuously.
+
+```bash 
+def ask_for_input():
+    while True:
+        guess = input('Please input your first guess as a single letter: ')
+
+        if len(guess) == 1 and guess.isalpha():
+            break
+        else:
+            print( "That is not a valid input, please enter a single alphabetical character.")
+    
+    check_guess(guess)
+```
+
+- check_guess() function is used to check the guess is in the word using an if statement shown below
+
+```bash 
+def check_guess(guess):
+    if guess in word:
+        print(f"Good guess {guess} is in the word!")
+    else:
+        print(f"Sorry {guess} is not in the word.")
+```
